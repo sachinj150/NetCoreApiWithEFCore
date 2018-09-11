@@ -1,0 +1,9 @@
+NetCoreApiWithEFCore/[Oo]bj/
+NetCoreApiWithEFCore/[Bb]in/
+NetCoreApiWithEFCore/App_Data
+NetCoreApiWithEFCore/Depends/*/*
+NetCoreApiWithEFCore/Packages
+NetCoreApiWithEFCore/Logs
+
+NetCoreApiWithEFCore/.vs/
+NetCoreApiWithEFCore/.vscode/
