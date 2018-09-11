@@ -12249,11 +12249,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sajambur\\Source\\Repos\\NetCoreApiWithEFCore2\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore.csproj",
+      "projectUniqueName": "C:\\Users\\sajambur\\Source\\Repos\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore.csproj",
       "projectName": "NetCoreApiWithEFCore",
-      "projectPath": "C:\\Users\\sajambur\\Source\\Repos\\NetCoreApiWithEFCore2\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore.csproj",
+      "projectPath": "C:\\Users\\sajambur\\Source\\Repos\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore.csproj",
       "packagesPath": "C:\\Users\\sajambur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sajambur\\Source\\Repos\\NetCoreApiWithEFCore2\\NetCoreApiWithEFCore\\obj\\",
+      "outputPath": "C:\\Users\\sajambur\\Source\\Repos\\NetCoreApiWithEFCore\\NetCoreApiWithEFCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
