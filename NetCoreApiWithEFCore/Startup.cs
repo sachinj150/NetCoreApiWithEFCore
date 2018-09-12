@@ -24,7 +24,7 @@ namespace Module1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddXmlSerializerFormatters();
-            services.AddApiVersioning(o => o.ApiVersionReader = new MediaTypeApiVersionReader());
+            services.AddApiVersioning();
             services.AddDbContext<ProductsDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("ProductDBContext")));
             services.AddScoped<IProduct, ProductRepository>();
             services.AddSwaggerGen(c =>

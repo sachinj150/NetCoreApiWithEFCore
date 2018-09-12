@@ -9,7 +9,7 @@ using Module1.Models;
 namespace Module1.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("api/moviesv1")]
+    [Route("api/v{version:apiVersion}/moviesv1")]
     [ApiController]
     public class MoviesV1Controller : ControllerBase
     {

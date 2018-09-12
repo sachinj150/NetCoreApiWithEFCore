@@ -8,7 +8,7 @@ using Module1.Models;
 
 namespace Module1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
     {

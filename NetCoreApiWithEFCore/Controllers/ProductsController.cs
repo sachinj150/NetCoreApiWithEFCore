@@ -11,7 +11,7 @@ using Module1.Services;
 namespace Module1.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("api/products")]
+    [Route("api/v{version:apiVersion}/products")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
