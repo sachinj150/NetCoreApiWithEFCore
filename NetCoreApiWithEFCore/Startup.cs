@@ -15,6 +15,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Module1.Data;
 using Module1.Services;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace Module1
 {
@@ -32,8 +33,10 @@ namespace Module1
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1).AddXmlSerializerFormatters();
             services.AddApiVersioning(o => o.ApiVersionReader = new MediaTypeApiVersionReader());
-            services.AddDbContext<ProductsDbContext>(option => option.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ProductsDb;"));
+            services.AddDbContext<ProductsDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("ProductDBContext")));
             services.AddScoped<IProduct, ProductRepository>();
+            services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1", new Info() {Title = "NetCoreApiWithEFCore", Version = "v1"}));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +52,8 @@ namespace Module1
             }
 
             app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api for Net Core with EF Core"));
             app.UseMvc();
             productsDbContext.Database.EnsureCreated();
         }
